@@ -33,6 +33,15 @@ public:
     return os;
   }
 
+  // operator overloading >
+  bool operator>=(PhanSo const& ps) {
+    return tuSo * ps.mauSo >= ps.tuSo * mauSo;
+  }
+
+  // operator overloading <
+  bool operator<(PhanSo const& ps) {
+    return tuSo * ps.mauSo < ps.tuSo * mauSo;
+  }
 
   void in() {
     cout << tuSo << "/" << mauSo << endl;
@@ -45,10 +54,20 @@ int main() {
   ps3 = ps1 + ps2;
   ps3.in();
 
-  PhanSo ps4, ps5;
-  cin >> ps4 >> ps5;
-  cout << ps4 << endl << ps5 << endl;
+  // PhanSo ps4, ps5;
+  // cin >> ps4 >> ps5;
+  // cout << ps4 << endl << ps5 << endl;
 
-  system("pause");
+
+  // cout << "So sanh ps1 > ps2: " << (ps1 >= ps1) << endl;
+
+  PhanSo pt[4] = { PhanSo(1, 2), PhanSo(1, 3), PhanSo(1, 4), PhanSo(1, 5) };
+
+  for (int i = 0; i < 4; i++) {
+    pt[i].in();
+  }
+
+
+  // system("pause");
   return 0;
 }
