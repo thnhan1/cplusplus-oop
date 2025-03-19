@@ -1,5 +1,6 @@
 *.exe
 /excludes
 /obj
-
 /*/*.exe
+/*.exe
+/*/*/*.exe
